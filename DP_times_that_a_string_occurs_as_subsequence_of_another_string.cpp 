@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+#define mod  90
+
+ll fun(string s,ll mat[50][50],string a){	
+	for(ll i=0;i<a.length();++i){
+		mat[0][i]=0;
+	}
+	for(ll i=0;i<s.length();++i){
+		mat[i][0]=1;
+	}
+
+	for(ll i=1;i<=s.length();++i){
+		for(ll j=1;j<=i && j<=a.length();++j){
+			if(s[i-1]==a[j-1]){// 
+				mat[i][j]=mat[i-1][j-1]+mat[i-1][j];
+			}
+			else{
+				mat[i][j]=mat[i-1][j];
+			}
+		}
+	}
+
+	return mat[s.length()][a.length()];
+}
+int main(){
+	
+	string s;cin>>s;
+	string a;cin>>a;
+
+	
+
+	ll mat[50][50];
+	memset(mat,0,sizeof(mat));
+	
+	cout<<fun(s,mat,a);
+	
+	
+	
+	return 0;
+}
