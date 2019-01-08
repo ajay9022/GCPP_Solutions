@@ -43,11 +43,12 @@ int main(){
 	ll sum=0;
 	ll mat[s.length()][k];
 	memset(mat,0,sizeof(mat));
-	//sum+=fun(s,"",k,0,0);
+	sum+=fun(s,"",k,0,0);
 	
-	//sum+=fun(s,"",k,0,1);
-	char a='5';
-	cout<<a-'0';
+	sum+=fun(s,"",k,0,1);
+	cout<<sum;
+	//char a='5';
+	//cout<<a-'0';
 	return 0;
 }
 /*
