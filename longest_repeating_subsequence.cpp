@@ -8,7 +8,7 @@ ll fun(string s,string x,string y,ll a,ll b){
 	if(a>=s.length() || b>=s.length()){
 		if(x==y && x!=""){
 			return x.length();
-			return 1;
+			
 		}
 		else{
 			return 0;
